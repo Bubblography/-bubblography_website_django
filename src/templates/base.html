@@ -5,7 +5,7 @@
     <title>{% block title %}Bubblography{% endblock %}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{% static '/src/static/css/cfehome-ui.css' %}" type="text/css">
+    <link href="{% static 'css/cfehome-ui.css' %}" type="text/css" rel="stylesheet">
   </head>
 
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
@@ -86,7 +86,7 @@
         </article>
         <img
           class="mx-auto rounded sm:max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg"
-          src="/src/img/MB_Bubble32.jpg"
+          src="{% static 'images/MB_Bubble32.jpg' %}"
           alt="<MB>"
         />
       </section>
@@ -107,7 +107,7 @@
             <div class="max-w-md border border-transparent">
               <a href="https://www.instagram.com/bubblography/" target="_blank">
                 <img
-                  src="/src/img/2022_12_03_F3x_2.JPG"
+                  src="{% static 'images/2022_12_03_F3x_2.JPG' %}"
                   alt="Description of image 1"
                   class="h-auto w-full object-cover"
                 />
@@ -118,7 +118,7 @@
             <div class="max-w-md border border-transparent">
               <a href="https://www.instagram.com/bubblography/" target="_blank">
                 <img
-                  src="/src/img/2022_12_03_F3x_5.JPG"
+                  src="{% static 'images/2022_12_03_F3x_5.JPG' %}"
                   alt="Description of image 1"
                   class="h-auto w-full object-cover"
                 />
@@ -129,7 +129,7 @@
             <div class="max-w-md border border-transparent">
               <a href="https://www.instagram.com/bubblography/" target="_blank">
                 <img
-                  src="/src/img/Mk2Maniac_Jetta.jpg"
+                  src="{% static 'images/Mk2Maniac_Jetta.jpg' %}"
                   alt="Description of image 1"
                   class="h-auto w-full object-cover"
                 />
@@ -140,7 +140,7 @@
             <div class="max-w-md border border-transparent">
               <a href="https://www.instagram.com/bubblography/" target="_blank">
                 <img
-                  src="/src/img/Peciuraite_Red_E91.jpg"
+                  src="{% static 'images/Shket_Mk2.jpg' %}"
                   alt="Description of image 1"
                   class="h-auto w-full object-cover"
                 />
@@ -264,6 +264,8 @@
         </div>
       </section>
     </footer>
-    <script src="{% static '/src/static/js/main.js' %}"></script>
+    {% block javascript %} 
+      <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    {% endblock %}
   </body>
 </html>
